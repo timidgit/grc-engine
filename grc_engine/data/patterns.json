@@ -1,0 +1,638 @@
+[
+  {
+    "pattern_id": "DORA-ART5-001",
+    "control_id": "DORA:Article_5",
+    "label": "ICT governance framework",
+    "description": "Board-level ICT governance and accountability structures",
+    "language": "any",
+    "detection_regex": "(?i)(ict[_\\s-]?governance|board[_\\s-]?oversight|ict[_\\s-]?committee)",
+    "regulation": "DORA",
+    "example_code": "class ICTGovernanceFramework:"
+  },
+  {
+    "pattern_id": "DORA-ART6-001",
+    "control_id": "DORA:Article_6",
+    "label": "ICT risk management framework",
+    "description": "Comprehensive ICT risk management framework implementation",
+    "language": "python",
+    "detection_regex": "(?i)(risk[_\\s-]?management[_\\s-]?framework|ict[_\\s-]?risk[_\\s-]?assess)",
+    "regulation": "DORA",
+    "example_code": "def assess_ict_risk(asset, threat_model):"
+  },
+  {
+    "pattern_id": "DORA-ART6-002",
+    "control_id": "DORA:Article_6",
+    "label": "Risk tolerance levels",
+    "description": "Defined risk appetite and tolerance thresholds",
+    "language": "any",
+    "detection_regex": "(?i)(risk[_\\s-]?tolerance|risk[_\\s-]?appetite|risk[_\\s-]?threshold)",
+    "regulation": "DORA",
+    "example_code": "RISK_TOLERANCE_HIGH = 0.8"
+  },
+  {
+    "pattern_id": "DORA-ART7-001",
+    "control_id": "DORA:Article_7",
+    "label": "ICT system inventory",
+    "description": "Classification and inventory of ICT systems and assets",
+    "language": "any",
+    "detection_regex": "(?i)(asset[_\\s-]?inventory|ict[_\\s-]?asset[_\\s-]?register|system[_\\s-]?classification|cmdb)",
+    "regulation": "DORA",
+    "example_code": "asset_registry = CMDBClient()"
+  },
+  {
+    "pattern_id": "DORA-ART8-001",
+    "control_id": "DORA:Article_8",
+    "label": "Change management procedures",
+    "description": "Formal change management and approval workflows",
+    "language": "any",
+    "detection_regex": "(?i)(change[_\\s-]?management|change[_\\s-]?approval|change[_\\s-]?request|pull[_\\s-]?request[_\\s-]?review)",
+    "regulation": "DORA",
+    "example_code": "def approve_change_request(change_id, approver):"
+  },
+  {
+    "pattern_id": "DORA-ART8-002",
+    "control_id": "DORA:Article_8",
+    "label": "CI/CD pipeline controls",
+    "description": "Automated build, test, and deployment pipelines",
+    "language": "yaml",
+    "detection_regex": "(?i)(ci[/_\\s-]?cd|github[_\\s-]?actions|jenkins|pipeline|deploy[_\\s-]?stage)",
+    "regulation": "DORA",
+    "example_code": "stages: [build, test, security-scan, deploy]"
+  },
+  {
+    "pattern_id": "DORA-ART8-003",
+    "control_id": "DORA:Article_8",
+    "label": "Code review enforcement",
+    "description": "Mandatory code review before merge",
+    "language": "any",
+    "detection_regex": "(?i)(required[_\\s-]?review|codeowners|branch[_\\s-]?protection|approve[_\\s-]?before[_\\s-]?merge)",
+    "regulation": "DORA",
+    "example_code": "required_approving_review_count: 2"
+  },
+  {
+    "pattern_id": "DORA-ART9-001",
+    "control_id": "DORA:Article_9",
+    "label": "Vulnerability scanning",
+    "description": "Automated vulnerability detection in code and dependencies",
+    "language": "any",
+    "detection_regex": "(?i)(vulnerability[_\\s-]?scan|security[_\\s-]?scan|sast|dast|dependabot|snyk|trivy|bandit)",
+    "regulation": "DORA",
+    "example_code": "bandit -r src/ -ll"
+  },
+  {
+    "pattern_id": "DORA-ART9-002",
+    "control_id": "DORA:Article_9",
+    "label": "Threat detection and logging",
+    "description": "Security event logging and threat detection",
+    "language": "python",
+    "detection_regex": "(?i)(threat[_\\s-]?detect|security[_\\s-]?event|audit[_\\s-]?log|siem[_\\s-]?integration)",
+    "regulation": "DORA",
+    "example_code": "security_logger.log_event('unauthorized_access', details)"
+  },
+  {
+    "pattern_id": "DORA-ART10-001",
+    "control_id": "DORA:Article_10",
+    "label": "Anomaly detection",
+    "description": "Automated detection of anomalous ICT activity",
+    "language": "python",
+    "detection_regex": "(?i)(anomaly[_\\s-]?detect|outlier[_\\s-]?detect|behavioral[_\\s-]?analysis|baseline[_\\s-]?deviation)",
+    "regulation": "DORA",
+    "example_code": "detector = AnomalyDetector(baseline_model)"
+  },
+  {
+    "pattern_id": "DORA-ART11-001",
+    "control_id": "DORA:Article_11",
+    "label": "Business continuity plan",
+    "description": "ICT business continuity and disaster recovery plans",
+    "language": "any",
+    "detection_regex": "(?i)(business[_\\s-]?continuity|disaster[_\\s-]?recovery|bcp|drp|failover|backup[_\\s-]?strategy)",
+    "regulation": "DORA",
+    "example_code": "class DisasterRecoveryPlan:"
+  },
+  {
+    "pattern_id": "DORA-ART11-002",
+    "control_id": "DORA:Article_11",
+    "label": "Recovery time objectives",
+    "description": "Defined RTO and RPO for critical systems",
+    "language": "any",
+    "detection_regex": "(?i)(recovery[_\\s-]?time[_\\s-]?objective|rto|recovery[_\\s-]?point[_\\s-]?objective|rpo)",
+    "regulation": "DORA",
+    "example_code": "RTO_CRITICAL = timedelta(hours=4)"
+  },
+  {
+    "pattern_id": "DORA-ART12-001",
+    "control_id": "DORA:Article_12",
+    "label": "Backup procedures",
+    "description": "Automated backup and restoration testing",
+    "language": "any",
+    "detection_regex": "(?i)(backup[_\\s-]?policy|backup[_\\s-]?schedule|restore[_\\s-]?test|backup[_\\s-]?verification)",
+    "regulation": "DORA",
+    "example_code": "schedule_backup(frequency='daily', retention='90d')"
+  },
+  {
+    "pattern_id": "DORA-ART13-001",
+    "control_id": "DORA:Article_13",
+    "label": "Incident communication",
+    "description": "Communication protocols for ICT incidents",
+    "language": "any",
+    "detection_regex": "(?i)(incident[_\\s-]?notification|incident[_\\s-]?communication|stakeholder[_\\s-]?alert|incident[_\\s-]?escalat)",
+    "regulation": "DORA",
+    "example_code": "notify_stakeholders(incident, severity='critical')"
+  },
+  {
+    "pattern_id": "DORA-ART14-001",
+    "control_id": "DORA:Article_14",
+    "label": "Security awareness training",
+    "description": "ICT security awareness and training programs",
+    "language": "any",
+    "detection_regex": "(?i)(security[_\\s-]?training|security[_\\s-]?awareness|phishing[_\\s-]?simulation|training[_\\s-]?complet)",
+    "regulation": "DORA",
+    "example_code": "training_tracker.record_completion(employee_id, 'ict_security')"
+  },
+  {
+    "pattern_id": "DORA-ART17-001",
+    "control_id": "DORA:Article_17",
+    "label": "Incident classification",
+    "description": "ICT incident detection, classification, and reporting",
+    "language": "python",
+    "detection_regex": "(?i)(incident[_\\s-]?classif|severity[_\\s-]?level|incident[_\\s-]?categor|incident[_\\s-]?triage)",
+    "regulation": "DORA",
+    "example_code": "classify_incident(event, taxonomy=DORA_TAXONOMY)"
+  },
+  {
+    "pattern_id": "DORA-ART17-002",
+    "control_id": "DORA:Article_17",
+    "label": "Incident response metrics",
+    "description": "MTTD, MTTR, and incident SLA tracking",
+    "language": "any",
+    "detection_regex": "(?i)(mttd|mttr|mean[_\\s-]?time[_\\s-]?to[_\\s-]?(?:detect|respond|recover)|incident[_\\s-]?sla)",
+    "regulation": "DORA",
+    "example_code": "metrics['mttr'] = (resolved_at - detected_at).total_seconds()"
+  },
+  {
+    "pattern_id": "DORA-ART19-001",
+    "control_id": "DORA:Article_19",
+    "label": "Major incident reporting",
+    "description": "Regulatory reporting for major ICT incidents",
+    "language": "any",
+    "detection_regex": "(?i)(major[_\\s-]?incident[_\\s-]?report|regulatory[_\\s-]?report|competent[_\\s-]?authority|incident[_\\s-]?notif)",
+    "regulation": "DORA",
+    "example_code": "submit_incident_report(incident, authority='EBA')"
+  },
+  {
+    "pattern_id": "DORA-ART24-001",
+    "control_id": "DORA:Article_24",
+    "label": "Penetration testing",
+    "description": "Threat-led penetration testing (TLPT) program",
+    "language": "any",
+    "detection_regex": "(?i)(penetration[_\\s-]?test|pentest|tlpt|red[_\\s-]?team|threat[_\\s-]?led[_\\s-]?test)",
+    "regulation": "DORA",
+    "example_code": "schedule_tlpt(scope='critical_systems', frequency='annual')"
+  },
+  {
+    "pattern_id": "DORA-ART25-001",
+    "control_id": "DORA:Article_25",
+    "label": "Resilience testing",
+    "description": "Digital operational resilience testing",
+    "language": "any",
+    "detection_regex": "(?i)(resilience[_\\s-]?test|chaos[_\\s-]?engineer|fault[_\\s-]?injection|stress[_\\s-]?test|load[_\\s-]?test)",
+    "regulation": "DORA",
+    "example_code": "chaos_test(target='payment-service', scenario='pod-kill')"
+  },
+  {
+    "pattern_id": "DORA-ART28-001",
+    "control_id": "DORA:Article_28",
+    "label": "Third-party risk management",
+    "description": "ICT third-party service provider risk assessment",
+    "language": "any",
+    "detection_regex": "(?i)(third[_\\s-]?party[_\\s-]?risk|vendor[_\\s-]?risk|supplier[_\\s-]?assess|tprm|sbom|software[_\\s-]?bill[_\\s-]?of[_\\s-]?material)",
+    "regulation": "DORA",
+    "example_code": "assess_vendor_risk(vendor_id, due_diligence_checklist)"
+  },
+  {
+    "pattern_id": "DORA-ART28-002",
+    "control_id": "DORA:Article_28",
+    "label": "Dependency tracking",
+    "description": "Software dependency and supply chain tracking",
+    "language": "any",
+    "detection_regex": "(?i)(dependency[_\\s-]?track|supply[_\\s-]?chain|license[_\\s-]?compl|dependency[_\\s-]?audit)",
+    "regulation": "DORA",
+    "example_code": "audit_dependencies(lockfile='poetry.lock')"
+  },
+  {
+    "pattern_id": "DORA-ART30-001",
+    "control_id": "DORA:Article_30",
+    "label": "Contract provisions",
+    "description": "Contractual provisions for ICT third-party services",
+    "language": "any",
+    "detection_regex": "(?i)(contract[_\\s-]?provision|sla[_\\s-]?monitor|service[_\\s-]?level[_\\s-]?agreement|exit[_\\s-]?strategy)",
+    "regulation": "DORA",
+    "example_code": "monitor_sla(provider_id, metrics=['availability', 'response_time'])"
+  },
+  {
+    "pattern_id": "DORA-ART33-001",
+    "control_id": "DORA:Article_33",
+    "label": "Threat intelligence",
+    "description": "Cyber threat intelligence sharing arrangements",
+    "language": "any",
+    "detection_regex": "(?i)(threat[_\\s-]?intelligence|cti|ioc[_\\s-]?feed|threat[_\\s-]?shar|stix|taxii)",
+    "regulation": "DORA",
+    "example_code": "ingest_threat_feed(source='MISP', format='stix2')"
+  },
+  {
+    "pattern_id": "DORA-ART45-001",
+    "control_id": "DORA:Article_45",
+    "label": "Information register",
+    "description": "Register of ICT third-party service arrangements",
+    "language": "any",
+    "detection_regex": "(?i)(information[_\\s-]?register|ict[_\\s-]?register|third[_\\s-]?party[_\\s-]?register|provider[_\\s-]?registry)",
+    "regulation": "DORA",
+    "example_code": "ict_register.add_provider(name, services, criticality)"
+  },
+  {
+    "pattern_id": "AIACT-ART9-001",
+    "control_id": "AIAct:Article_9",
+    "label": "AI risk management system",
+    "description": "Risk management system for high-risk AI systems",
+    "language": "python",
+    "detection_regex": "(?i)(ai[_\\s-]?risk[_\\s-]?manage|model[_\\s-]?risk|bias[_\\s-]?assess|fairness[_\\s-]?metric|risk[_\\s-]?classif.*ai)",
+    "regulation": "AI Act",
+    "example_code": "ai_risk_score = assess_model_risk(model, dataset)"
+  },
+  {
+    "pattern_id": "AIACT-ART9-002",
+    "control_id": "AIAct:Article_9",
+    "label": "Model monitoring",
+    "description": "Continuous monitoring of AI model performance and drift",
+    "language": "python",
+    "detection_regex": "(?i)(model[_\\s-]?monitor|drift[_\\s-]?detect|performance[_\\s-]?degrad|data[_\\s-]?drift|concept[_\\s-]?drift)",
+    "regulation": "AI Act",
+    "example_code": "monitor = DriftDetector(baseline_distribution)"
+  },
+  {
+    "pattern_id": "AIACT-ART10-001",
+    "control_id": "AIAct:Article_10",
+    "label": "Training data governance",
+    "description": "Data quality and governance for AI training data",
+    "language": "python",
+    "detection_regex": "(?i)(training[_\\s-]?data[_\\s-]?(?:quality|governance|validation)|data[_\\s-]?lineage|data[_\\s-]?provenance)",
+    "regulation": "AI Act",
+    "example_code": "validate_training_data(dataset, quality_rules)"
+  },
+  {
+    "pattern_id": "AIACT-ART10-002",
+    "control_id": "AIAct:Article_10",
+    "label": "Bias detection in data",
+    "description": "Statistical bias detection in training datasets",
+    "language": "python",
+    "detection_regex": "(?i)(bias[_\\s-]?detect|disparate[_\\s-]?impact|demographic[_\\s-]?parity|equalized[_\\s-]?odds|protected[_\\s-]?attribute)",
+    "regulation": "AI Act",
+    "example_code": "bias_report = detect_bias(dataset, protected_attrs=['gender', 'age'])"
+  },
+  {
+    "pattern_id": "AIACT-ART11-001",
+    "control_id": "AIAct:Article_11",
+    "label": "AI technical documentation",
+    "description": "Technical documentation for AI systems",
+    "language": "any",
+    "detection_regex": "(?i)(model[_\\s-]?card|ai[_\\s-]?documentation|system[_\\s-]?spec|technical[_\\s-]?document.*ai)",
+    "regulation": "AI Act",
+    "example_code": "generate_model_card(model, metrics, intended_use)"
+  },
+  {
+    "pattern_id": "AIACT-ART12-001",
+    "control_id": "AIAct:Article_12",
+    "label": "AI audit logging",
+    "description": "Automatic logging of AI system events and decisions",
+    "language": "python",
+    "detection_regex": "(?i)(ai[_\\s-]?audit[_\\s-]?log|model[_\\s-]?decision[_\\s-]?log|prediction[_\\s-]?log|inference[_\\s-]?log|explainab)",
+    "regulation": "AI Act",
+    "example_code": "log_prediction(model_id, input_hash, output, confidence)"
+  },
+  {
+    "pattern_id": "AIACT-ART12-002",
+    "control_id": "AIAct:Article_12",
+    "label": "Model versioning",
+    "description": "Version control for ML models and experiments",
+    "language": "python",
+    "detection_regex": "(?i)(mlflow|model[_\\s-]?version|experiment[_\\s-]?track|model[_\\s-]?registry|wandb|dvc)",
+    "regulation": "AI Act",
+    "example_code": "mlflow.log_model(model, 'model', registered_model_name='fraud_detector')"
+  },
+  {
+    "pattern_id": "AIACT-ART13-001",
+    "control_id": "AIAct:Article_13",
+    "label": "AI transparency",
+    "description": "Transparency and user notification for AI systems",
+    "language": "any",
+    "detection_regex": "(?i)(ai[_\\s-]?transparen|explainable[_\\s-]?ai|xai|shap|lime|feature[_\\s-]?importance|human[_\\s-]?oversight)",
+    "regulation": "AI Act",
+    "example_code": "explanation = shap.explain(model, input_data)"
+  },
+  {
+    "pattern_id": "AIACT-ART14-001",
+    "control_id": "AIAct:Article_14",
+    "label": "Human oversight mechanisms",
+    "description": "Human-in-the-loop and override capabilities",
+    "language": "python",
+    "detection_regex": "(?i)(human[_\\s-]?in[_\\s-]?the[_\\s-]?loop|human[_\\s-]?override|manual[_\\s-]?review|approval[_\\s-]?workflow.*model)",
+    "regulation": "AI Act",
+    "example_code": "if confidence < THRESHOLD: request_human_review(prediction)"
+  },
+  {
+    "pattern_id": "AIACT-ART15-001",
+    "control_id": "AIAct:Article_15",
+    "label": "AI accuracy and robustness",
+    "description": "Accuracy, robustness, and cybersecurity of AI systems",
+    "language": "python",
+    "detection_regex": "(?i)(adversarial[_\\s-]?test|robustness[_\\s-]?test|model[_\\s-]?accuracy|accuracy[_\\s-]?threshold|model[_\\s-]?validation)",
+    "regulation": "AI Act",
+    "example_code": "assert model_accuracy >= 0.95, 'Below threshold'"
+  },
+  {
+    "pattern_id": "AIACT-ART17-001",
+    "control_id": "AIAct:Article_17",
+    "label": "AI quality management",
+    "description": "Quality management system for AI providers",
+    "language": "any",
+    "detection_regex": "(?i)(quality[_\\s-]?management.*ai|ai[_\\s-]?quality|ml[_\\s-]?ops|mlops|model[_\\s-]?lifecycle)",
+    "regulation": "AI Act",
+    "example_code": "class AIQualityManagement(MLOpsFramework):"
+  },
+  {
+    "pattern_id": "AIACT-ART52-001",
+    "control_id": "AIAct:Article_52",
+    "label": "AI system disclosure",
+    "description": "Notification that content is AI-generated",
+    "language": "any",
+    "detection_regex": "(?i)(ai[_\\s-]?generated|generated[_\\s-]?by[_\\s-]?ai|synthetic[_\\s-]?content|deepfake[_\\s-]?detect|ai[_\\s-]?disclos)",
+    "regulation": "AI Act",
+    "example_code": "response.headers['X-AI-Generated'] = 'true'"
+  },
+  {
+    "pattern_id": "AIACT-ART61-001",
+    "control_id": "AIAct:Article_61",
+    "label": "Post-market monitoring",
+    "description": "Post-market monitoring system for AI",
+    "language": "python",
+    "detection_regex": "(?i)(post[_\\s-]?market[_\\s-]?monitor|production[_\\s-]?monitor|deployed[_\\s-]?model[_\\s-]?monitor|live[_\\s-]?model[_\\s-]?metric)",
+    "regulation": "AI Act",
+    "example_code": "monitor_deployed_model(model_id, alert_on=['drift', 'accuracy_drop'])"
+  },
+  {
+    "pattern_id": "ISO27001-A5.1-001",
+    "control_id": "ISO27001:A.5.1",
+    "label": "Information security policies",
+    "description": "Documented information security policy suite",
+    "language": "any",
+    "detection_regex": "(?i)(security[_\\s-]?policy|information[_\\s-]?security[_\\s-]?policy|policy[_\\s-]?document|isms[_\\s-]?policy)",
+    "regulation": "ISO 27001",
+    "example_code": "# Reference: Information Security Policy v3.2"
+  },
+  {
+    "pattern_id": "ISO27001-A5.2-001",
+    "control_id": "ISO27001:A.5.2",
+    "label": "Security roles and responsibilities",
+    "description": "Defined information security roles",
+    "language": "any",
+    "detection_regex": "(?i)(security[_\\s-]?role|ciso|security[_\\s-]?officer|codeowners|security[_\\s-]?responsib)",
+    "regulation": "ISO 27001",
+    "example_code": "CODEOWNERS file with security team assignments"
+  },
+  {
+    "pattern_id": "ISO27001-A5.3-001",
+    "control_id": "ISO27001:A.5.3",
+    "label": "Segregation of duties",
+    "description": "Separation of conflicting duties and responsibilities",
+    "language": "python",
+    "detection_regex": "(?i)(segregation[_\\s-]?of[_\\s-]?dut|separation[_\\s-]?of[_\\s-]?dut|four[_\\s-]?eyes|dual[_\\s-]?control|two[_\\s-]?person[_\\s-]?rule)",
+    "regulation": "ISO 27001",
+    "example_code": "require_dual_approval(action, initiator, approver)"
+  },
+  {
+    "pattern_id": "ISO27001-A8.2-001",
+    "control_id": "ISO27001:A.8.2",
+    "label": "Privileged access management",
+    "description": "Management and restriction of privileged access rights",
+    "language": "python",
+    "detection_regex": "(?i)(privileged[_\\s-]?access|rbac|role[_\\s-]?based[_\\s-]?access|least[_\\s-]?privilege|admin[_\\s-]?access[_\\s-]?control)",
+    "regulation": "ISO 27001",
+    "example_code": "@require_role('admin')"
+  },
+  {
+    "pattern_id": "ISO27001-A8.5-001",
+    "control_id": "ISO27001:A.8.5",
+    "label": "Secure authentication",
+    "description": "Multi-factor authentication and credential management",
+    "language": "python",
+    "detection_regex": "(?i)(multi[_\\s-]?factor|mfa|two[_\\s-]?factor|2fa|totp|oauth2|openid[_\\s-]?connect|jwt[_\\s-]?auth)",
+    "regulation": "ISO 27001",
+    "example_code": "require_mfa(user, method='totp')"
+  },
+  {
+    "pattern_id": "ISO27001-A8.9-001",
+    "control_id": "ISO27001:A.8.9",
+    "label": "Configuration management",
+    "description": "Secure configuration baselines and hardening",
+    "language": "any",
+    "detection_regex": "(?i)(configuration[_\\s-]?manage|config[_\\s-]?baseline|hardening|cis[_\\s-]?benchmark|security[_\\s-]?baseline)",
+    "regulation": "ISO 27001",
+    "example_code": "validate_config(server, baseline='CIS_L2')"
+  },
+  {
+    "pattern_id": "ISO27001-A8.15-001",
+    "control_id": "ISO27001:A.8.15",
+    "label": "Logging and monitoring",
+    "description": "Security event logging and log analysis",
+    "language": "python",
+    "detection_regex": "(?i)(security[_\\s-]?log|audit[_\\s-]?log|log[_\\s-]?aggregat|centralized[_\\s-]?log|siem|log[_\\s-]?monitor)",
+    "regulation": "ISO 27001",
+    "example_code": "security_logger.info('access_granted', user=user_id, resource=resource)"
+  },
+  {
+    "pattern_id": "ISO27001-A8.20-001",
+    "control_id": "ISO27001:A.8.20",
+    "label": "Network security",
+    "description": "Network segmentation and access control",
+    "language": "any",
+    "detection_regex": "(?i)(network[_\\s-]?segment|firewall[_\\s-]?rule|network[_\\s-]?policy|network[_\\s-]?access[_\\s-]?control|zero[_\\s-]?trust)",
+    "regulation": "ISO 27001",
+    "example_code": "NetworkPolicy(allow=[('app-tier', 'db-tier', 5432)])"
+  },
+  {
+    "pattern_id": "ISO27001-A8.24-001",
+    "control_id": "ISO27001:A.8.24",
+    "label": "Cryptography usage",
+    "description": "Cryptographic controls and key management",
+    "language": "python",
+    "detection_regex": "(?i)(cryptograph|key[_\\s-]?management|key[_\\s-]?rotation|encryption[_\\s-]?key|kms|hsm|pki)",
+    "regulation": "ISO 27001",
+    "example_code": "rotate_encryption_key(kms_key_id, schedule='90d')"
+  },
+  {
+    "pattern_id": "ISO27001-A8.25-001",
+    "control_id": "ISO27001:A.8.25",
+    "label": "Secure development lifecycle",
+    "description": "Security in the software development lifecycle",
+    "language": "any",
+    "detection_regex": "(?i)(secure[_\\s-]?sdlc|sdl|security[_\\s-]?review|threat[_\\s-]?model|secure[_\\s-]?coding|owasp)",
+    "regulation": "ISO 27001",
+    "example_code": "threat_model = analyze_attack_surface(component)"
+  },
+  {
+    "pattern_id": "ISO27001-A8.25-002",
+    "control_id": "ISO27001:A.8.25",
+    "label": "Static analysis",
+    "description": "Static code analysis in CI/CD",
+    "language": "any",
+    "detection_regex": "(?i)(static[_\\s-]?analysis|sonarqube|semgrep|codeql|pylint|eslint.*security)",
+    "regulation": "ISO 27001",
+    "example_code": "sonarqube-scan: { quality-gate: 'Sonar way' }"
+  },
+  {
+    "pattern_id": "ISO27001-A8.28-001",
+    "control_id": "ISO27001:A.8.28",
+    "label": "Secure coding practices",
+    "description": "Input validation and output encoding",
+    "language": "python",
+    "detection_regex": "(?i)(input[_\\s-]?validat|sanitiz|escape[_\\s-]?html|parameterized[_\\s-]?query|prepared[_\\s-]?statement|sql[_\\s-]?inject)",
+    "regulation": "ISO 27001",
+    "example_code": "cursor.execute('SELECT * FROM users WHERE id = %s', (user_id,))"
+  },
+  {
+    "pattern_id": "ISO27001-A5.23-001",
+    "control_id": "ISO27001:A.5.23",
+    "label": "Cloud security",
+    "description": "Information security for cloud services",
+    "language": "any",
+    "detection_regex": "(?i)(cloud[_\\s-]?security|shared[_\\s-]?responsib|cspm|cloud[_\\s-]?security[_\\s-]?posture|cloud[_\\s-]?access[_\\s-]?security)",
+    "regulation": "ISO 27001",
+    "example_code": "cspm_scan(provider='AWS', compliance_standard='ISO27001')"
+  },
+  {
+    "pattern_id": "ISO27001-A5.29-001",
+    "control_id": "ISO27001:A.5.29",
+    "label": "Incident management process",
+    "description": "Information security incident management",
+    "language": "any",
+    "detection_regex": "(?i)(incident[_\\s-]?management[_\\s-]?process|incident[_\\s-]?response[_\\s-]?plan|irp|incident[_\\s-]?handler|playbook)",
+    "regulation": "ISO 27001",
+    "example_code": "execute_playbook('ransomware_response', incident_id)"
+  },
+  {
+    "pattern_id": "ISO27001-A5.30-001",
+    "control_id": "ISO27001:A.5.30",
+    "label": "ICT readiness for business continuity",
+    "description": "ICT preparedness for business continuity",
+    "language": "any",
+    "detection_regex": "(?i)(ict[_\\s-]?readiness|business[_\\s-]?impact[_\\s-]?analysis|bia|continuity[_\\s-]?plan|recovery[_\\s-]?plan)",
+    "regulation": "ISO 27001",
+    "example_code": "bia = assess_business_impact(system, max_downtime='4h')"
+  },
+  {
+    "pattern_id": "AIACT-ART6-MODEL-001",
+    "control_id": "AIAct:Article_6",
+    "label": "AI risk classification tag",
+    "description": "Model version must have risk_classification tag (high/limited/minimal)",
+    "detection_type": "mlflow_tag",
+    "detection_key": "risk_classification",
+    "language": "any",
+    "detection_regex": "(?i)(risk[_\\s-]?classification[_\\s-]?tag|model[_\\s-]?risk[_\\s-]?tier)",
+    "regulation": "AI Act",
+    "example_code": "mlflow.set_tag('risk_classification', 'high')"
+  },
+  {
+    "pattern_id": "AIACT-ART9-MODEL-001",
+    "control_id": "AIAct:Article_9",
+    "label": "Risk management evaluation",
+    "description": "Model must have at least one evaluation run with compliance scorers",
+    "detection_type": "mlflow_eval",
+    "detection_key": "eval_type=genai",
+    "language": "python",
+    "detection_regex": "(?i)(mlflow\\.genai\\.evaluate|compliance[_\\s-]?scorer|eval[_\\s-]?type.*genai)",
+    "regulation": "AI Act",
+    "example_code": "mlflow.genai.evaluate(data=eval_data, scorers=COMPLIANCE_SCORERS)"
+  },
+  {
+    "pattern_id": "AIACT-ART10-MODEL-001",
+    "control_id": "AIAct:Article_10",
+    "label": "Training data lineage",
+    "description": "Model version must link to a training run with logged input datasets",
+    "detection_type": "mlflow_run_link",
+    "language": "python",
+    "detection_regex": "(?i)(mlflow\\.log[_\\s-]?input|log[_\\s-]?dataset|data[_\\s-]?lineage|training[_\\s-]?run[_\\s-]?link)",
+    "regulation": "AI Act",
+    "example_code": "mlflow.log_input(dataset, context='training')"
+  },
+  {
+    "pattern_id": "AIACT-ART12-MODEL-001",
+    "control_id": "AIAct:Article_12",
+    "label": "Model version record-keeping",
+    "description": "Model must have description, version history, and stage transition audit trail",
+    "detection_type": "mlflow_registry",
+    "language": "python",
+    "detection_regex": "(?i)(registered[_\\s-]?model|model[_\\s-]?registry|stage[_\\s-]?transition|model[_\\s-]?version[_\\s-]?audit)",
+    "regulation": "AI Act",
+    "example_code": "mlflow.register_model(model_uri, name='fraud_detector')"
+  },
+  {
+    "pattern_id": "AIACT-ART13-MODEL-001",
+    "control_id": "AIAct:Article_13",
+    "label": "Transparency disclosure",
+    "description": "Production model outputs must include AI disclosure (checked via scorer)",
+    "detection_type": "mlflow_scorer",
+    "detection_key": "transparency",
+    "language": "python",
+    "detection_regex": "(?i)(transparency[_\\s-]?scorer|ai[_\\s-]?disclosure|Guidelines.*transparency)",
+    "regulation": "AI Act",
+    "example_code": "Guidelines(name='transparency', guidelines='...')"
+  },
+  {
+    "pattern_id": "AIACT-ART15-MODEL-001",
+    "control_id": "AIAct:Article_15",
+    "label": "Accuracy and robustness metrics",
+    "description": "Model must have accuracy metrics from evaluation runs",
+    "detection_type": "mlflow_eval",
+    "detection_key": "correctness/mean",
+    "language": "python",
+    "detection_regex": "(?i)(Correctness\\(\\)|accuracy[_\\s-]?metric|correctness.*mean|robustness[_\\s-]?eval)",
+    "regulation": "AI Act",
+    "example_code": "scorers=[Correctness(), RelevanceToQuery()]"
+  },
+  {
+    "pattern_id": "DORA-ART8-MODEL-001",
+    "control_id": "DORA:Article_8",
+    "label": "ICT system monitoring (AI)",
+    "description": "AI system traces must be collected with error rate < 5%",
+    "detection_type": "mlflow_trace",
+    "detection_key": "error_rate_7d",
+    "language": "python",
+    "detection_regex": "(?i)(trace[_\\s-]?error[_\\s-]?rate|mlflow.*trace|search[_\\s-]?traces|agent[_\\s-]?trace)",
+    "regulation": "DORA",
+    "example_code": "error_rate = connector.get_trace_error_rate(days=7)"
+  },
+  {
+    "pattern_id": "DORA-ART9-MODEL-001",
+    "control_id": "DORA:Article_9",
+    "label": "ICT risk identification (AI)",
+    "description": "AI model must have risk classification and periodic review",
+    "detection_type": "mlflow_tag",
+    "detection_key": "last_review_date",
+    "language": "any",
+    "detection_regex": "(?i)(last[_\\s-]?review[_\\s-]?date|model[_\\s-]?review|periodic[_\\s-]?review.*model)",
+    "regulation": "DORA",
+    "example_code": "mlflow.set_tag('last_review_date', '2026-01-15')"
+  },
+  {
+    "pattern_id": "ISO27001-A825-MODEL-001",
+    "control_id": "ISO27001:A.8.25",
+    "label": "Secure development lifecycle (AI)",
+    "description": "Model promotion from Staging to Production requires approval tag",
+    "detection_type": "mlflow_tag",
+    "detection_key": "approved_by",
+    "language": "any",
+    "detection_regex": "(?i)(approved[_\\s-]?by|approval[_\\s-]?tag|model[_\\s-]?approval|production[_\\s-]?approval)",
+    "regulation": "ISO 27001",
+    "example_code": "mlflow.set_tag('approved_by', 'security-team')"
+  }
+]

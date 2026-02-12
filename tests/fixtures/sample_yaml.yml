@@ -1,0 +1,14 @@
+# Sample YAML for compliance scanning tests
+ci_cd:
+  stages: [build, test, security-scan, deploy]
+  security_scan:
+    - bandit -r src/ -ll
+    - trivy image myapp:latest
+
+business_continuity:
+  disaster_recovery:
+    rto: "4h"
+    rpo: "1h"
+  backup_policy:
+    frequency: daily
+    retention: 90d
