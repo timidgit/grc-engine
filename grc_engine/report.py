@@ -47,7 +47,9 @@ def render_scorecard(result: ScanResult) -> None:
             color = "red"
 
         filled = int(score.pct / 10)
-        bar = f"[{color}]{'\u2588' * filled}{'\u2591' * (10 - filled)}[/{color}]"
+        full = "\u2588" * filled
+        empty = "\u2591" * (10 - filled)
+        bar = f"[{color}]{full}{empty}[/{color}]"
 
         table.add_row(
             reg,
